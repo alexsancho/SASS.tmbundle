@@ -25,6 +25,8 @@ TM_CSS_SPACE    : used on snippets to define separation between rule and value
 
 ## THANKS ##
 
+- https://github.com/chriseppstein
+
 - http://minimaldesign.net/downloads/tools/textmate-css-bundle
 - https://github.com/aussiegeek/ruby-sass-tmbundle
 - https://github.com/postpostmodern/sass-generator-tmbundle
