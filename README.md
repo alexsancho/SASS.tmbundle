@@ -8,7 +8,7 @@ In the terminal:
 
 $ cd ~/Library/Application Support/Avian/Bundles  
 
-$ git clone git@github.com:alexsancho/SASS.tmbundle.git SASS.tmbundle
+$ git clone git://github.com/alexsancho/SASS.tmbundle.git SASS.tmbundle
 
 Environment variables
 ---------------------
