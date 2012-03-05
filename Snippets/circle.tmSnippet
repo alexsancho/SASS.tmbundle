@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>@mixin circle($r) {
+  // $r: radius
+  @include border-radius($r);
+  height: ($r * 2);
+  width: ($r * 2);
+}</string>
+	<key>name</key>
+	<string>circle</string>
+	<key>scope</key>
+	<string>source.scss</string>
+	<key>tabTrigger</key>
+	<string>mixin</string>
+	<key>uuid</key>
+	<string>CA05B5DA-846F-4C3B-AAB7-57968D3DD724</string>
+</dict>
+</plist>

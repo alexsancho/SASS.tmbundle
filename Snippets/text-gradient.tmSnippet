@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>@mixin text-gradient($start, $stop) {
+  background:-webkit-linear-gradient(top,$start,$stop);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}</string>
+	<key>name</key>
+	<string>text-gradient</string>
+	<key>scope</key>
+	<string>source.scss</string>
+	<key>tabTrigger</key>
+	<string>mixin</string>
+	<key>uuid</key>
+	<string>788C9FD2-BDF6-4276-BEEE-2FC4B36B5537</string>
+</dict>
+</plist>
