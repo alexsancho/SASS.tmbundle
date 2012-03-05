@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>// 
+// @TODO: Add docs to $1!
+//
+@mixin ${1:mixin-name}${2:(${3:\$params})}
+  $0</string>
+	<key>name</key>
+	<string>@mixin</string>
+	<key>scope</key>
+	<string>source.sass</string>
+	<key>tabTrigger</key>
+	<string>mixin</string>
+	<key>uuid</key>
+	<string>B5A073FD-08F0-444C-8773-0BA2DBD0C7D6</string>
+</dict>
+</plist>

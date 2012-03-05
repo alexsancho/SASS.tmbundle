@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+require ENV['TM_BUNDLE_SUPPORT'] + '/lib/compass_env'
+
+TextMate.require_env_var 'TM_COMPASS_PATH'
+CURRENT_WORD = STDIN.read
+TextMate.exit_show_tool_tip "Require line with variable" if CURRENT_WORD.nil?
+
+result = Compass::Reader.find_variable CURRENT_WORD.strip
+TextMate.exit_show_tool_tip "Cannot find #{CURRENT_WORD}" if result == nil
+
+TextMate.go_to result
+</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>word</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^@k</string>
+	<key>name</key>
+	<string>Find Variable</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.scss</string>
+	<key>uuid</key>
+	<string>DA2143FC-58DD-4F1A-B704-3F18E3827182</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
