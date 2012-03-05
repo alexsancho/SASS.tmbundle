@@ -17,7 +17,7 @@ TM_SASS			: path to sass executable, not needed if is on your path
 
 TM_COMPASS		: path to compass gem, not needed if is on your path  
 
-TM_COMPASS_DOCS : url to compass docs, usefull if you have the docs installed on local (optional, defaults to http://compass-style.org/)  
+TM_COMPASS_DOCS : compass docs url, usefull if you have the docs installed locally (optional, defaults to http://compass-style.org/)  
 
 TM_COMPASS_PATH : full path to compass gem directory, required to use "Find Mixin", "Selec Mixin", "Find Variable", "Select Variable" commands  
 
