@@ -13,15 +13,15 @@ $ git clone git://github.com/alexsancho/SASS.tmbundle.git SASS.tmbundle
 Environment variables
 ---------------------
 
-TM_SASS			: path to sass executable, not needed if is on your path  
+**TM_SASS**			: path to sass executable, not needed if is on your path  
 
-TM_COMPASS		: path to compass gem, not needed if is on your path  
+**TM_COMPASS**		: path to compass gem, not needed if is on your path  
 
-TM_COMPASS_DOCS : compass docs url, usefull if you have the docs installed locally (optional, defaults to http://compass-style.org/)  
+**TM_COMPASS_DOCS** : compass docs url (optional, defaults to http://compass-style.org/)  
 
-TM_COMPASS_PATH : full path to compass gem directory, required to use "Find Mixin", "Selec Mixin", "Find Variable", "Select Variable" commands  
+**TM_COMPASS_PATH** : full path to compass gem directory, required to use "Find Mixin", "Selec Mixin", "Find Variable", "Select Variable" commands  
 
-TM_CSS_SPACE    : used on snippets to define separation between rule and value
+**TM_CSS_SPACE**    : used on snippets to define separation between rule and value
 
 ## THANKS ##
 
