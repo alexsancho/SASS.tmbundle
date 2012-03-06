@@ -4,15 +4,13 @@
 <dict>
 	<key>content</key>
 	<string>@mixin font-face( $font-name, $font-url ) {
-  // $font-name: The name of the font to use
-  // $font-url:  The url to given font sans the ext.
-  @font-face {
-    font-family: '#{$font-name}';
-    src: url('#{$font-url}.eot?#iefix') format('embedded-opentype'), 
-         url('#{$font-url}.woff') format('woff'), 
-         url('#{$font-url}.ttf')  format('truetype'),
-         url('#{$font-url}.svg#svg#{$font-name}') format('svg');
-  }
+	@font-face {
+		font-family: '#{$font-name}';
+		src: url('#{$font-url}.eot?#iefix') format('embedded-opentype'), 
+			url('#{$font-url}.woff') format('woff'), 
+			url('#{$font-url}.ttf')  format('truetype'),
+			url('#{$font-url}.svg#svg#{$font-name}') format('svg');
+	}
 }</string>
 	<key>name</key>
 	<string>font-face</string>

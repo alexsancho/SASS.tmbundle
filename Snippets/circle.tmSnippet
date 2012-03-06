@@ -3,11 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin circle($r) {
-  // $r: radius
-  @include border-radius($r);
-  height: ($r * 2);
-  width: ($r * 2);
+	<string>@mixin circle($r: 18px) {
+	@include border-radius($r);
+	height: ($r * 2);
+	width: ($r * 2);
 }</string>
 	<key>name</key>
 	<string>circle</string>

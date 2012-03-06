@@ -3,14 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin text-shadow($x, $y, $color, $b: 0) {
-  // $color: hex color of the shadow
-  // $x: x-offset
-  // $y: y-offset
-  // $b: blur
-  filter: "progid:DXImageTransform.Microsoft.DropShadow(color='#{$color}', offx='#{$x}', offy='#{$y}')";
-  -ms-filter: "progid:DXImageTransform.Microsoft.DropShadow(color='#{$color}', offx='#{$x}', offy='#{$y}')";
-  text-shadow: $x+px $y+px $b+px $color;
+	<string>@mixin text-shadow($x: 1px, $y: 1px, $color: #333, $blur: 0) {
+	filter: "progid:DXImageTransform.Microsoft.DropShadow(color='#{$color}', offx='#{$x}', offy='#{$y}')";
+	-ms-filter: "progid:DXImageTransform.Microsoft.DropShadow(color='#{$color}', offx='#{$x}', offy='#{$y}')";
+	text-shadow: $x+px $y+px $b+px $color;
 }</string>
 	<key>name</key>
 	<string>text-shadow</string>

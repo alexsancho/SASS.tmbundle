@@ -3,22 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin border-radius($r: 3px) {
-	-moz-border-radius: $r;
-	-webkit-border-radius: $r;
-	border-radius: $r;
-
-	-moz-background-clip: padding;
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box; 
+	<string>@mixin opacity($opacity: 0.5) {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity * 10)";
+	filter: alpha(opacity=$opacity * 10);
+	-moz-opacity: $opacity;
+	opacity: $opacity;
 }</string>
 	<key>name</key>
-	<string>border-radius</string>
+	<string>opacity</string>
 	<key>scope</key>
 	<string>source.scss</string>
 	<key>tabTrigger</key>
 	<string>mixin</string>
 	<key>uuid</key>
-	<string>B089400C-E3B9-438D-B36F-12DF3E36234B</string>
+	<string>C7C87AA5-962E-4BC9-A8BD-5A86D1F47014</string>
 </dict>
 </plist>

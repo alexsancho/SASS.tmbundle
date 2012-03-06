@@ -34,4 +34,4 @@ Environment variables
 - https://github.com/kuroir/SCSS.tmbundle
 - https://github.com/grimen/compass_blueprint_tmbundle
 - https://github.com/dougochris/Compass.tmbundle
-
+- https://github.com/ajaswa/scss-helpers

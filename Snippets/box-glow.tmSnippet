@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin box-shadow($x: 0, $y: 0, $blur: 5px, $spread: 0, $opacity: 0.5) {
+	<string>@mixin box-glow($color: #fff, $blur: 5px, $spread: 0, $opacity: 0.5) {
 	-webkit-box-shadow: $x $y $blur $spread rgba(0, 0, 0, $opacity);
 	-moz-box-shadow: $x $y $blur $spread rgba(0, 0, 0, $opacity);
 	box-shadow: $x $y $blur $spread rgba(0, 0, 0, $opacity);
 }
 
-@mixin inner-box-shadow($x: 0, $y: 0, $blur: 5px, $spread: 0, $opacity: 0.5) {
+@mixin inner-box-glow($color: #fff, $blur: 5px, $spread: 0, $opacity: 0.5) {
 	-webkit-box-shadow: inset $x $y $blur $spread rgba(0, 0, 0, $opacity);
 	-moz-box-shadow: inset $x $y $blur $spread rgba(0, 0, 0, $opacity);
 	box-shadow: inset $x $y $blur $spread rgba(0, 0, 0, $opacity);
@@ -17,12 +17,12 @@
 
 </string>
 	<key>name</key>
-	<string>box-shadow</string>
+	<string>box-glow</string>
 	<key>scope</key>
 	<string>source.scss</string>
 	<key>tabTrigger</key>
 	<string>mixin</string>
 	<key>uuid</key>
-	<string>4AC63F6F-9E35-42A6-B8BF-56FE860EC8D0</string>
+	<string>6F0F1A51-C5AC-45D6-BD0D-429030C6EE89</string>
 </dict>
 </plist>

@@ -4,9 +4,9 @@
 <dict>
 	<key>content</key>
 	<string>@mixin text-gradient($start, $stop) {
-  background:-webkit-linear-gradient(top,$start,$stop);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+	background:-webkit-linear-gradient(top,$start,$stop);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 }</string>
 	<key>name</key>
 	<string>text-gradient</string>
