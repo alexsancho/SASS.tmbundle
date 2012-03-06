@@ -7,9 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 
-require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/sass_engine")
+require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/env")
 
-TMSass::validate()
+SASS::Writer::render("Validating Project", SASS::Reader::validate_compass)
 </string>
 	<key>input</key>
 	<string>none</string>

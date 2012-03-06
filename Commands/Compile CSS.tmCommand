@@ -7,10 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 
-require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/sass_engine")
+require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/env")
 
-TMSass::compile()
-</string>
+SASS::Writer::render("Compile project", SASS::Reader::compile)</string>
 	<key>input</key>
 	<string>none</string>
 	<key>inputFormat</key>

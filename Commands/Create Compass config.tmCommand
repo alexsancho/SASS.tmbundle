@@ -7,9 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 
-require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/sass_engine")
+require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/env")
 
-TMSass::config()
+SASS::Writer::render("Creating Compass Config", SASS::Reader::create_compass_config)
 </string>
 	<key>input</key>
 	<string>none</string>

@@ -7,7 +7,7 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 
-require ENV['TM_BUNDLE_SUPPORT'] + '/lib/compass_env'
+require ENV['TM_BUNDLE_SUPPORT'] + '/lib/env'
 
 TextMate.require_env_var 'TM_COMPASS_PATH'
 cur_line = ENV['TM_CURRENT_LINE']
