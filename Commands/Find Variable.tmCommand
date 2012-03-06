@@ -9,14 +9,14 @@
 
 require ENV['TM_BUNDLE_SUPPORT'] + '/lib/env'
 
-TextMate.require_env_var 'TM_COMPASS_PATH'
-CURRENT_WORD = STDIN.read
-TextMate.exit_show_tool_tip "Require line with variable" if CURRENT_WORD.nil?
+TextMate::require_env_var 'TM_COMPASS_PATH'
 
-result = Compass::Reader.find_variable CURRENT_WORD.strip
-TextMate.exit_show_tool_tip "Cannot find #{CURRENT_WORD}" if result == nil
+TextMate::exit_show_tool_tip "Require line with variable" if CURRENT_WORD.empty?
 
-TextMate.go_to result
+result = Compass::Reader::find_variable CURRENT_WORD.strip
+TextMate::exit_show_tool_tip "Cannot find #{CURRENT_WORD}" if result == nil
+
+TextMate::go_to result
 </string>
 	<key>fallbackInput</key>
 	<string>word</string>

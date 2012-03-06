@@ -6,34 +6,34 @@ module SASS
 		class << self
 			def compile
 				if compass_root
-				  @result = `#{compass_bin} compile #{@compass_root.gsub(' ','\ ')} --boring 2>&1`
+				  `#{compass_bin} compile #{@compass_root.gsub(' ','\ ')} --boring 2>&1`
 				else
 				  command = options.empty? ? "cat" : "tail -n +2"
-				  @result = `#{command} #{e_sh FILEPATH} | #{engine} --style #{style} #{flags} > #{e_sh output_filename} 2>&1`
+				  `#{command} #{e_sh FILEPATH} | #{sass_bin} --style #{style} #{flags} > #{e_sh output_filename} 2>&1`
 				end
 			end
   
 			def validate_compass
 				if compass_root
-					@result = `#{compass_bin} validate #{@compass_root} --boring 2>&1`
+					`#{compass_bin} validate #{@compass_root} --boring 2>&1`
 				else
 					command = options.empty? ? "cat" : "tail -n +2"
-					@result = `#{engine} -c #{escape(FILEPATH)} 2>&1`
+					`#{sass_bin} -c #{e_sh FILEPATH} 2>&1`
 				end
 			end
 
 			def project_stats
 				if compass_root
-					@result = `#{compass_bin} stats #{@compass_root} --boring 2>&1`
+					`#{compass_bin} stats #{@compass_root} --boring 2>&1`
 				end
 			end
 
 			def create_compass_project
-				@result = `#{compass_bin} create #{PROJECT} --app=stand_alone --environment=development --sass-dir=sass --css-dir=css --images-dir=img --javascripts-dir=js --output-style=expanded --no-line-comments --boring 2>&1`
+				`#{compass_bin} create #{PROJECT} --app=stand_alone --environment=development --sass-dir=sass --css-dir=css --images-dir=img --javascripts-dir=js --output-style=expanded --no-line-comments --boring 2>&1`
 			end
 
 			def create_compass_config
-				@result = `#{compass_bin} config config.rb --app=stand_alone --environment=development --sass-dir=sass --css-dir=css --images-dir=img --javascripts-dir=js --output-style=expanded --no-line-comments --boring 2>&1`
+				`#{compass_bin} config config.rb --app=stand_alone --environment=development --sass-dir=sass --css-dir=css --images-dir=img --javascripts-dir=js --output-style=expanded --no-line-comments --boring 2>&1`
 			end
 
 			def options
@@ -57,10 +57,6 @@ module SASS
 				options[:flags] || "-s"
 			end
 
-			def engine
-				options[:engine] || type
-			end
-
 			def style
 				options[:style] || "compact"
 			end
@@ -74,6 +70,10 @@ module SASS
 					return @compass_root
 				end
 				return false
+			end
+
+			def sass_bin
+				@sass_bin ||= options[:engine] || type
 			end
 
 			def compass_bin

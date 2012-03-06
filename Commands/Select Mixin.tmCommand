@@ -9,15 +9,9 @@
 
 require ENV['TM_BUNDLE_SUPPORT'] + '/lib/env'
 
-TextMate.require_env_var 'TM_COMPASS_PATH'
-cur_line = ENV['TM_CURRENT_LINE']
-cur_word = ENV['TM_CURRENT_WORD']
+TextMate::require_env_var 'TM_COMPASS_PATH'
 
-# since dash (‘-’) is not a word character, extend current word to neighboring word and dash characters
-CURRENT_WORD = /[-\w]*#{Regexp.escape cur_word}[-\w]*/.match(cur_line)[0]
-
-c = Compass::Reader.load_mixins
-Compass::Writer.complete(c, (CURRENT_WORD || '').strip.sub(/^\+/, ""))
+Compass::Writer::complete(Compass::Reader::load_mixins, (CURRENT_WORD || '').strip.sub(/^\+/, ""))
 </string>
 	<key>fallbackInput</key>
 	<string>word</string>

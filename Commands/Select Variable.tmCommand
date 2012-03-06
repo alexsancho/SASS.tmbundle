@@ -10,9 +10,8 @@
 require ENV['TM_BUNDLE_SUPPORT'] + '/lib/env'
 
 TextMate.require_env_var 'TM_COMPASS_PATH'
-CURRENT_WORD = STDIN.read
-c = Compass::Reader.load_variables
-Compass::Writer.complete(c, (CURRENT_WORD || '').strip)
+
+Compass::Writer::complete(Compass::Reader::load_variables, (CURRENT_WORD || '').strip)
 </string>
 	<key>fallbackInput</key>
 	<string>word</string>
