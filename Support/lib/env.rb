@@ -30,3 +30,10 @@ require BUN_SUP + '/sass/reader'
 require BUN_SUP + '/compass/writer'
 require BUN_SUP + '/compass/reader'
 
+class Array
+  def uniq_by
+    hash, array = {}, []
+    each { |i| hash[yield(i)] ||= (array << i) }
+    array
+  end
+end

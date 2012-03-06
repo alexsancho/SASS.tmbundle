@@ -13,7 +13,7 @@ module Compass
 							when /^@mixin /i
 								match = line.scan(/^@mixin ([\w-]*)/).to_s
 								mixins << {
-									'display' => line.strip,
+									'display' => match,
 									'match' => match,
 									'insert' => find_mixin_args(match, file_name),
 									'image' => "Mixin",
@@ -23,7 +23,7 @@ module Compass
 						end
 					end
 				end  
-				mixins.sort {|a,b| a['display'] <=> b['display']}
+				mixins.uniq_by {|o| o['display']}.sort_by {|o| o['display']}
 			end 
 
 			def load_variables
@@ -35,8 +35,8 @@ module Compass
 							when /^\$([\w-]*)[\s*]?[:+]?[.*]?[;+]?/i
 								match = line.strip.gsub(/:\ .*$/, '')
 								variables << {
-									'display' => line.strip,
-									'match' => match.strip,
+									'display' => match,
+									'match' => match,
 									'insert' => find_var_args(match, file_name),
 									'image' => "Mixin",
 									'filename' => file_name.sub(ENV['TM_COMPASS_PATH'], "")
@@ -45,7 +45,7 @@ module Compass
 						end
 					end
 				end  
-				variables.sort {|a,b| a['display'] <=> b['display']}
+				variables.uniq_by {|o| o['display']}.sort_by {|o| o['display']}
 			end      
 
 			def find_mixin mixin
