@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby -wKU
 # encoding: utf-8
 
+require 'rubygems'
+require 'sass'
+require 'sass/css'
+require 'compass'
+
 # Used as a common require to set up the environment for commands. 
 
 FILEPATH = "#{ENV['TM_FILEPATH']}"
@@ -15,6 +20,8 @@ cur_word = ENV['TM_CURRENT_WORD'] || nil
 
 # since dash (‘-’) is not a word character, extend current word to neighboring word and dash characters
 CURRENT_WORD = /[-\w]*#{Regexp.escape cur_word}[-\w]*/.match(cur_line)[0] unless cur_word.nil?
+
+SELECTED_TEXT = ENV['TM_SELECTED_TEXT'] || nil
 
 require SUPPORT + '/lib/escape'
 require SUPPORT + '/lib/exit_codes'

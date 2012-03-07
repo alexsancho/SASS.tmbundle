@@ -15,10 +15,7 @@ module SASS
 			end
 
 			def convert(type)
-				require 'rubygems'
-				require 'sass/css'; 
-
-				puts Sass::CSS.new(ENV['TM_SELECTED_TEXT']).render(type)
+				puts Sass::CSS.new(SELECTED_TEXT).render(type)
 			end
 
 		end

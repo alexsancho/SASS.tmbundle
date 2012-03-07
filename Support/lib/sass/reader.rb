@@ -4,21 +4,19 @@
 module SASS
 	module Reader
 		class << self
-			def compile
-				if compass_root
-				  `#{compass_bin} compile #{@compass_root.gsub(' ','\ ')} --boring 2>&1`
-				else
-				  command = options.empty? ? "cat" : "tail -n +2"
-				  `#{command} #{e_sh FILEPATH} | #{sass_bin} --style #{style} #{flags} > #{e_sh output_filename} 2>&1`
-				end
+			def compile_file
+				msg = "Converting #{FILEPATH} to #{output_filename} ..."
+				Sass::compile_file(FILEPATH, output_filename, options)
+				msg += "\nDone"
+			rescue Sass::SyntaxError => e
+				msg += "\nSass syntax error!"
+				msg += "\n#{FILEPATH}, Line #{e.sass_line}: #{e}"
+				msg
 			end
   
 			def validate_compass
 				if compass_root
 					`#{compass_bin} validate #{@compass_root} --boring 2>&1`
-				else
-					command = options.empty? ? "cat" : "tail -n +2"
-					`#{sass_bin} -c #{e_sh FILEPATH} 2>&1`
 				end
 			end
 
@@ -37,43 +35,38 @@ module SASS
 			end
 
 			def options
-				return {} unless File.file?(FILEPATH)
+				hash = defaults
+				return hash unless File.file?(FILEPATH)
 				first_line = File.open(FILEPATH) {|f| f.readline unless f.eof} || ''
-				return {} unless first_line.match(/\s*\/\/\s*(.+:.+)/)
+				return hash unless first_line.match(/\s*\/\/\s*(.+:.+)/)
   
 				$1.split(',').inject({}) do |hash, pair|
 					k,v = pair.split(':')
-					hash[k.strip.to_sym] = v.strip if k && v
-					hash
+					hash[k.strip.to_sym] = v.strip.to_sym if k && v
 				end
+				hash
 			end
 		private
-  
-			def type
-				@type ||= FILEPATH[/.+\.(.+)/,1].to_sym
-			end
-  
-			def flags
-				options[:flags] || "-s"
+			def defaults
+				if compass_root
+					Compass.add_project_configuration Compass.detect_configuration_file(compass_root)
+					hash = Compass.sass_engine_options;
+				else
+					hash = {}
+				end
 			end
 
-			def style
-				options[:style] || "compact"
+			def type
+				@type ||= FILEPATH[/.+\.(.+)/, 1].to_sym
 			end
 
 			def compass_root
 				if ENV["TM_COMPASS"] != "false"
-					config = File.join(PROJECT, '/config.rb')
-
-					@compass_root = PROJECT if File.exist?(config) || false
+					@compass_root = PROJECT if Compass.detect_configuration_file(PROJECT) || false
 
 					return @compass_root
 				end
 				return false
-			end
-
-			def sass_bin
-				@sass_bin ||= options[:engine] || type
 			end
 
 			def compass_bin
@@ -81,7 +74,8 @@ module SASS
 			end
   
 			def output_filename
-				@output_filename ||= options[:output] || (FILEPATH[/(.*)\.#{type}/,1] + ".css")
+				file = (FILEPATH[/(.*)\.#{type}/,1] + ".css").gsub(/\/sass\//, '/css/')
+				@output_filename ||= options[:output] || file
 			end
 
 		end

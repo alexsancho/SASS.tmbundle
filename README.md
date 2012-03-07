@@ -13,8 +13,6 @@ $ git clone git://github.com/alexsancho/SASS.tmbundle.git SASS.tmbundle
 Environment variables
 ---------------------
 
-**TM_SASS**			: path to sass executable, not needed if is on your path  
-
 **TM_COMPASS**		: path to compass gem, not needed if is on your path  
 
 **TM_COMPASS_DOCS** : compass docs url (optional, defaults to http://compass-style.org/)  
