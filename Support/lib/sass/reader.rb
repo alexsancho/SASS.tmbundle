@@ -15,15 +15,11 @@ module SASS
 			end
   
 			def validate_compass
-				if compass_root
-					`#{compass_bin} validate #{@compass_root} --boring 2>&1`
-				end
+				`#{compass_bin} validate #{@compass_root} --boring 2>&1` if compass_root
 			end
 
 			def project_stats
-				if compass_root
-					`#{compass_bin} stats #{@compass_root} --boring 2>&1`
-				end
+				`#{compass_bin} stats #{@compass_root} --boring 2>&1` if compass_root
 			end
 
 			def create_compass_project
@@ -61,12 +57,7 @@ module SASS
 			end
 
 			def compass_root
-				if ENV["TM_COMPASS"] != "false"
-					@compass_root = PROJECT if Compass.detect_configuration_file(PROJECT) || false
-
-					return @compass_root
-				end
-				return false
+				@compass_root = PROJECT if Compass.detect_configuration_file(PROJECT) || false
 			end
 
 			def compass_bin
