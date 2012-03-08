@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby -wKU
 # encoding: utf-8
 
-require 'rubygems'
+require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require 'sass'
 require 'sass/css'
 require 'compass'

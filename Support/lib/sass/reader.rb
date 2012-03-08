@@ -8,36 +8,40 @@ module SASS
 		class << self
 			def compile_file(filepath, project)
 				msg = "\nConverting #{filepath} to #{output_filename(filepath, project)} ..."
-				Sass::compile_file(filepath, output_filename(filepath, project), options(filepath, project))
-				msg += "\nDone"
-			rescue Sass::SyntaxError => e
-				msg += "\nSass syntax error!"
-				msg += "\n#{filepath}, Line #{e.sass_line}: #{e}"
+				begin
+					Sass::compile_file(filepath, output_filename(filepath, project), options(filepath, project))
+					msg += "\nDone"
+				rescue Sass::SyntaxError => e
+					msg += "\nSass syntax error!"
+					msg += "\n#{filepath}, Line #{e.sass_line}: #{e}"
+				end
 				msg
 			end
 
 			def compile_project(directory, project, max_depth=4)
 				Dir.chdir(directory)
 
-				i = 1
-				until Dir.getwd.match(/scss\/?$/) do
-					raise NoSassDirError if (i > max_depth) or (Dir.getwd == project)
-					Dir.chdir('../')
-					i += 1
-				end
+				msg = ''
+				begin
+					i = 1
+					until Dir.getwd.match(/scss\/?$/) do
+						raise NoSassDirError if (i > max_depth) or (Dir.getwd == project)
+						Dir.chdir('../')
+						i += 1
+					end
 
-				msg = "\nReady to compile all files under #{Dir.getwd}"
+					msg = "\nReady to compile all files under #{Dir.getwd}"
 
-				sass_files = Dir.open('.') do |d|
-					d.find_all { |f| f.match /^[^_].*\.scss$/ }
-				end
+					sass_files = Dir.open('.') do |d|
+						d.find_all { |f| f.match /^[^_].*\.scss$/ }
+					end
 
-				sass_files.each do |sass|
-					msg += compile_file("#{Dir.getwd}/"+sass, project)
+					sass_files.each do |sass|
+						msg += compile_file("#{Dir.getwd}/"+sass, project)
+					end
+				rescue NoSassDirError
+					msg += "\nCan't find sass dir in #{directory}!!"
 				end
-				msg
-			rescue NoSassDirError
-				msg += "\nCan't find sass dir!"
 				msg
 			end
 
