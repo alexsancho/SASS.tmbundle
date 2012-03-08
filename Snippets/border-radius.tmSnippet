@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin border-radius($r: 3px) {
-	-moz-border-radius: $r;
-	-webkit-border-radius: $r;
-	border-radius: $r;
+	<string>@mixin border-radius(\$r: 3px) {
+	-moz-border-radius: \$r;
+	-webkit-border-radius: \$r;
+	border-radius: \$r;
 
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding-box;

@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin text-gradient($start, $stop) {
-	background:-webkit-linear-gradient(top,$start,$stop);
+	<string>@mixin text-gradient(\$start, \$stop) {
+	background:-webkit-linear-gradient(top,\$start,\$stop);
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 }</string>

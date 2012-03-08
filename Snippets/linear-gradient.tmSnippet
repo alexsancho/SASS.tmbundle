@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin linear-gradient( $color: #ccc, $start: #000, $stop: #fff, $point: 'top' ) {
-	background: $color;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start), color-stop(100%, $stop)); /* Safari 4+, old Chrome */
-	background: -webkit-linear-gradient($point, $start, $stop); /* Safari 5.1+, Chrome */
-	background: -moz-linear-gradient($point, $start, $stop); /* FF 3.6+ */
-	background: -ms-linear-gradient($point, $start, $stop); /* IE10 */
-	background: -o-linear-gradient($point, $start, $stop); /* Opera */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$stop}'); /* IE6 &amp; IE7 */
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$stop}')"; /* IE8+ */
-	background: linear-gradient($point, $start, $stop);
+	<string>@mixin linear-gradient( \$color: #ccc, \$start: #000, \$stop: #fff, \$point: 'top' ) {
+	background: \$color;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, \$start), color-stop(100%, \$stop)); /* Safari 4+, old Chrome */
+	background: -webkit-linear-gradient(\$point, \$start, \$stop); /* Safari 5.1+, Chrome */
+	background: -moz-linear-gradient(\$point, \$start, \$stop); /* FF 3.6+ */
+	background: -ms-linear-gradient(\$point, \$start, \$stop); /* IE10 */
+	background: -o-linear-gradient(\$point, \$start, \$stop); /* Opera */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{\$start}', endColorstr='#{\$stop}'); /* IE6 &amp; IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{\$start}', endColorstr='#{\$stop}')"; /* IE8+ */
+	background: linear-gradient(\$point, \$start, \$stop);
 }</string>
 	<key>name</key>
 	<string>linear-gradient</string>

@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin opacity($opacity: 0.5) {
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity * 10)";
-	filter: alpha(opacity=$opacity * 10);
-	-moz-opacity: $opacity;
-	opacity: $opacity;
+	<string>@mixin opacity(\$opacity: 0.5) {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=\$opacity * 10)";
+	filter: alpha(opacity=\$opacity * 10);
+	-moz-opacity: \$opacity;
+	opacity: \$opacity;
 }</string>
 	<key>name</key>
 	<string>opacity</string>

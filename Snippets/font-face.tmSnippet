@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@mixin font-face( $font-name, $font-url ) {
+	<string>@mixin font-face( \$font-name, \$font-url ) {
 	@font-face {
-		font-family: '#{$font-name}';
-		src: url('#{$font-url}.eot?#iefix') format('embedded-opentype'), 
-			url('#{$font-url}.woff') format('woff'), 
-			url('#{$font-url}.ttf')  format('truetype'),
-			url('#{$font-url}.svg#svg#{$font-name}') format('svg');
+		font-family: '#{\$font-name}';
+		src: url('#{\$font-url}.eot?#iefix') format('embedded-opentype'), 
+			url('#{\$font-url}.woff') format('woff'), 
+			url('#{\$font-url}.ttf')  format('truetype'),
+			url('#{\$font-url}.svg#svg#{\$font-name}') format('svg');
 	}
 }</string>
 	<key>name</key>
