@@ -22,7 +22,7 @@ SASS::Writer::convert('scss')
 	<key>keyEquivalent</key>
 	<string>^@c</string>
 	<key>name</key>
-	<string>Convert CSS to SCSS</string>
+	<string>Selection to SCSS</string>
 	<key>outputCaret</key>
 	<string>heuristic</string>
 	<key>outputFormat</key>

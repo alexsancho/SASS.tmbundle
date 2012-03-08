@@ -22,7 +22,7 @@ SASS::Writer::convert('sass')
 	<key>keyEquivalent</key>
 	<string>^@c</string>
 	<key>name</key>
-	<string>Convert CSS to SASS</string>
+	<string>Selection to SASS</string>
 	<key>outputCaret</key>
 	<string>heuristic</string>
 	<key>outputFormat</key>
