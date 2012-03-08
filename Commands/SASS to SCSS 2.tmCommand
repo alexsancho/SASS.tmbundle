@@ -10,23 +10,29 @@
 
 require_cmd sass-convert
 
-echo "$TM_SELECTED_TEXT" | sass-convert --from scss --to sass</string>
+echo "$TM_SELECTED_TEXT" | sass-convert --from sass --to scss</string>
+	<key>fallbackInput</key>
+	<string>word</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>inputFormat</key>
 	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^@c</string>
 	<key>name</key>
-	<string>SCSS to SASS</string>
+	<string>SASS to SCSS</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
 	<key>outputCaret</key>
-	<string>heuristic</string>
+	<string>afterOutput</string>
 	<key>outputFormat</key>
-	<string>text</string>
+	<string>html</string>
 	<key>outputLocation</key>
-	<string>replaceInput</string>
+	<string>discard</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.scss, source.sass</string>
 	<key>uuid</key>
-	<string>49B13F70-B978-4633-AB69-8D2AB64C870E</string>
+	<string>799442DE-683B-4207-9E8B-79C8D11FF1F1</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>

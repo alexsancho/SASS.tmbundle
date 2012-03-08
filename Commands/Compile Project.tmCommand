@@ -5,30 +5,30 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env bash
-[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+	<string>#!/usr/bin/env ruby
 
-require_cmd sass-convert
+require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/env")
 
-echo "$TM_SELECTED_TEXT" | sass-convert --from sass --to sass --dasherize</string>
+SASS::Writer::render("Compile file", SASS::Reader::compile_project(DIRECTORY, PROJECT))
+</string>
 	<key>input</key>
-	<string>selection</string>
+	<string>none</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>^~@c</string>
+	<string>@r</string>
 	<key>name</key>
-	<string>Cleanup SASS</string>
+	<string>Compile Project</string>
 	<key>outputCaret</key>
-	<string>heuristic</string>
+	<string>afterOutput</string>
 	<key>outputFormat</key>
-	<string>text</string>
+	<string>html</string>
 	<key>outputLocation</key>
-	<string>replaceInput</string>
+	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.sass</string>
+	<string>source.scss, source.sass</string>
 	<key>uuid</key>
-	<string>5AC218D8-49AC-4E26-B793-FDC7EC833F93</string>
+	<string>4410C027-6C84-44E7-9A36-505C90105991</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>

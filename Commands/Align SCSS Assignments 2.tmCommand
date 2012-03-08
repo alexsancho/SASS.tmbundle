@@ -128,6 +128,8 @@ lines.each do |line|
    puts line
 end
 </string>
+	<key>fallbackInput</key>
+	<string>document</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>inputFormat</key>
@@ -136,16 +138,18 @@ end
 	<string>@:</string>
 	<key>name</key>
 	<string>Align SCSS Assignments</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
 	<key>outputCaret</key>
-	<string>heuristic</string>
+	<string>afterOutput</string>
 	<key>outputFormat</key>
-	<string>text</string>
+	<string>html</string>
 	<key>outputLocation</key>
-	<string>replaceInput</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>source.scss</string>
 	<key>uuid</key>
-	<string>C5012C1B-2078-47B2-9E60-1CDE6B555AB8</string>
+	<string>9FA92481-8557-43E1-9C90-89F0E54B3630</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>

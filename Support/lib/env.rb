@@ -9,6 +9,7 @@ require 'compass'
 # Used as a common require to set up the environment for commands. 
 
 FILEPATH = "#{ENV['TM_FILEPATH']}"
+DIRECTORY = "#{ENV['TM_DIRECTORY']}"
 PROJECT = "#{ENV['TM_PROJECT_DIRECTORY']}"
 SUPPORT = "#{ENV['TM_SUPPORT_PATH']}"
 BUN_SUP = File.expand_path(File.dirname(__FILE__))

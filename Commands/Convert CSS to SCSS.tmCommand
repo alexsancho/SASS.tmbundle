@@ -30,7 +30,7 @@ SASS::Writer::convert('scss')
 	<key>outputLocation</key>
 	<string>replaceInput</string>
 	<key>scope</key>
-	<string>source.css, source.scss</string>
+	<string>source.css, source.scss, source.sass</string>
 	<key>uuid</key>
 	<string>9C31A515-475B-4AC0-839E-F257CF06EA75</string>
 	<key>version</key>

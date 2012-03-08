@@ -9,15 +9,17 @@
 
 require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/env")
 
-SASS::Writer::render("Compile file", SASS::Reader::compile_file)</string>
+SASS::Writer::render("Compile file", SASS::Reader::compile_file(FILEPATH, PROJECT))</string>
 	<key>input</key>
 	<string>none</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>@r</string>
+	<string>@s</string>
 	<key>name</key>
-	<string>Compile CSS</string>
+	<string>Compile File</string>
+	<key>output</key>
+	<string>showAsHTML</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
@@ -25,9 +27,9 @@ SASS::Writer::render("Compile file", SASS::Reader::compile_file)</string>
 	<key>outputLocation</key>
 	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.sass, source.scss</string>
+	<string>source.scss, source.sass</string>
 	<key>uuid</key>
-	<string>78345399-B86D-4A76-B211-BF75190906EA</string>
+	<string>BE5DB41C-38C8-42A3-BA80-23F09A0E7959</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>

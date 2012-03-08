@@ -5,34 +5,34 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
 
-require File.join(ENV['TM_BUNDLE_SUPPORT'], "lib/env")
+require_cmd sass-convert
 
-TextMate::exit_show_tool_tip "This command only works on a selection" if SELECTED_TEXT.nil?
-
-SASS::Writer::convert('sass')
-</string>
+echo "$TM_SELECTED_TEXT" | sass-convert --from sass --to sass --dasherize</string>
 	<key>fallbackInput</key>
-	<string>line</string>
+	<string>word</string>
 	<key>input</key>
 	<string>selection</string>
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>^@c</string>
+	<string>^~@c</string>
 	<key>name</key>
-	<string>Convert CSS to SASS</string>
+	<string>Cleanup SASS</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
 	<key>outputCaret</key>
-	<string>heuristic</string>
+	<string>afterOutput</string>
 	<key>outputFormat</key>
-	<string>text</string>
+	<string>html</string>
 	<key>outputLocation</key>
-	<string>replaceInput</string>
+	<string>discard</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.sass</string>
+	<string>source.sass</string>
 	<key>uuid</key>
-	<string>34F11652-B740-44FC-9D3C-9ABE74A5D1BB</string>
+	<string>4C0F5E94-743F-4BBA-B801-74FDE91D4355</string>
 	<key>version</key>
 	<integer>2</integer>
 </dict>
