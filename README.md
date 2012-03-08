@@ -3,22 +3,6 @@ TextMate SASS
 
 TextMate bundle to work with [SASS/SCSS][1] & [Compass][2] projects.
 
-Command reference
------------------
-
-- ⌘S Save current sass file and compile into css.
-- ⌘R Compile all files under `scss` directory into css
-- ^⌘C Convert selection to SASS/SCSS
-- ⌘⇧P Create a new compass project
-- ⌥⇧C Create a compass configuration file (config.rb)
-- ⌘⇧W Compile all files under `scss` directory and validates the generated CSS using W3C CSS Validator
-- ⌘⌥⇧S Print out statistics about your stylesheets
-- ⇧⌘K Search for selected mixin on compass source files
-- ^⌘K Search for selected variable
-- ⌘K Compass mixin completion
-- ⌘⌥K Compass variable completion
-- ^H Search for selected word in Compass documentation
-
 Pre-requisites
 --------------
 
@@ -47,6 +31,22 @@ Environment variables
 **TM_COMPASS_PATH** : full path to compass gem directory, required to use "Find Mixin", "Selec Mixin", "Find Variable", "Select Variable" commands  
 
 **TM_CSS_SPACE**    : used on snippets to define separation between rule and value
+
+Command reference
+-----------------
+
+- ⌘S Save current sass file and compile into css.
+- ⌘R Compile all files under `scss` directory into css
+- ^⌘C Convert selection to SASS/SCSS
+- ⌘⇧P Create a new compass project
+- ⌥⇧C Create a compass configuration file (config.rb)
+- ⌘⇧W Compile all files under `scss` directory and validates the generated CSS using W3C CSS Validator
+- ⌘⌥⇧S Print out statistics about your stylesheets
+- ⇧⌘K Search for selected mixin on compass source files
+- ^⌘K Search for selected variable
+- ⌘K Compass mixin completion
+- ⌘⌥K Compass variable completion
+- ^H Search for selected word in Compass documentation
 
 THANKS
 ------
