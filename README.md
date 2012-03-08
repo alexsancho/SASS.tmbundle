@@ -28,7 +28,7 @@ Environment variables
 
 **TM_COMPASS_DOCS** : compass docs url (optional, defaults to http://compass-style.org/)  
 
-**TM_COMPASS_PATH** : full path to compass gem directory, required to use "Find Mixin", "Selec Mixin", "Find Variable", "Select Variable" commands  
+**TM_COMPASS_PATH** : full path to compass gem directory, required to use "Find Mixin", "Select Mixin", "Find Variable", "Select Variable" commands  
 
 **TM_CSS_SPACE**    : used on snippets to define separation between rule and value
 
