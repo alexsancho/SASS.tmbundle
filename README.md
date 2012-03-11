@@ -1,4 +1,4 @@
-TextMate SASS
+TextMate SASS [![Build Status](https://secure.travis-ci.org/alexsancho/SASS.tmbundle.png)](http://travis-ci.org/alexsancho/SASS.tmbundle)
 -------------
 
 TextMate bundle to work with [SASS/SCSS][1] & [Compass][2] projects.
