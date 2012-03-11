@@ -1,10 +1,9 @@
-$:.unshift(File.dirname(__FILE__) + '/../../rspec/lib')
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require 'rspec/core/rake_task'
 
 desc "Run all specs"
-RSpec::Core::RakeTask.new do |t|
-  t.rcov = true
-  t.rspec_opts = ['--colour', '--diff']
-  t.rcov_opts = ['--exclude', 'rspec\/plugins,rspec\/lib\/spec,spec\/spec,fixtures,bin\/spec']
+RSpec::Core::RakeTask.new(:spec) do |t|
+	t.fail_on_error = false
 end
+
+task :default => :spec

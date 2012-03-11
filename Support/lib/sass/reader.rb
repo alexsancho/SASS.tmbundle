@@ -73,6 +73,7 @@ module SASS
 				end
 				hash
 			end
+  
 		private
 			def defaults(project)
 				if compass_root(project)
