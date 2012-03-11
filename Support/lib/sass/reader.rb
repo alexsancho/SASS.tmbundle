@@ -7,6 +7,8 @@ module SASS
 	module Reader
 		class << self
 			def compile_file(filepath, project)
+			    raise "You must supply a filename to compile." unless filepath
+
 				msg = "\nConverting #{filepath} to #{output_filename(filepath, project)} ..."
 				begin
 					Sass::compile_file(filepath, output_filename(filepath, project), options(filepath, project))

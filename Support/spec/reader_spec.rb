@@ -20,4 +20,10 @@ describe "Reader" do
 
   end
 
+  describe "filenames" do
+    it "should require a filename" do
+      lambda { SASS::Reader::compile_file }.should raise_error
+    end
+  end
+
 end
