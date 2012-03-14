@@ -13,6 +13,7 @@ GEM
     diff-lcs (1.1.3)
     fssm (0.2.8.1)
     json (1.6.3)
+    rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
     rspec (2.8.0)
@@ -31,5 +32,6 @@ PLATFORMS
 DEPENDENCIES
   compass
   css_parser
+  rake
   rspec
   sass
