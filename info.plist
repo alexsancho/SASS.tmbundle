@@ -138,6 +138,8 @@
 	</array>
 	<key>description</key>
 	<string></string>
+	<key>isDisabled</key>
+	<false/>
 	<key>mainMenu</key>
 	<dict>
 		<key>items</key>
