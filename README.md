@@ -60,7 +60,7 @@ THANKS
 - https://github.com/kuroir/SCSS.tmbundle
 - https://github.com/grimen/compass_blueprint_tmbundle
 - https://github.com/dougochris/Compass.tmbundle
-- https://github.com/ajaswa/scss-helpers
+- https://github.com/ajaswa/scss_helpers
 
 [1]: http://sass-lang.com/
 [2]: http://compass-style.org/
