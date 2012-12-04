@@ -96,7 +96,7 @@ module SASS
 			end
 
 			def output_filename(filepath, project)
-				file = (filepath[/(.*)\.#{type(filepath)}/,1] + ".css").gsub(/\/scss\//, '/css/')
+				file = (filepath[/(.*)\.#{type(filepath)}/,1] + ".css").gsub(/\/s[ac]ss\//, '/css/')
 				@output_filename = options(filepath, project)[:output] || file
 			end
 
