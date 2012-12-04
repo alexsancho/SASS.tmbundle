@@ -1,6 +1,3 @@
-#!/usr/bin/env ruby -wKU
-# encoding: utf-8
-
 module Compass
 	module Reader
 		class << self
@@ -22,9 +19,9 @@ module Compass
 							end
 						end
 					end
-				end  
+				end
 				mixins.uniq_by {|o| o['display']}.sort_by {|o| o['display']}
-			end 
+			end
 
 			def load_variables
 				variables = []
@@ -44,9 +41,9 @@ module Compass
 							end
 						end
 					end
-				end  
+				end
 				variables.uniq_by {|o| o['display']}.sort_by {|o| o['display']}
-			end      
+			end
 
 			def find_mixin mixin
 				mixin.gsub!(/^\+/, '')
@@ -70,7 +67,7 @@ module Compass
 
 			def find_variable variable
 				regex = Regexp.new "\\#{variable}[\s*]?[:+]?[.*]?[;+]?"
-        
+
 				Dir[ENV['TM_COMPASS_PATH'] + '/**/*.scss'].each do | file_name |
 					File.open(file_name, 'r') do |file|
 						index = 0
@@ -93,7 +90,7 @@ module Compass
 				text = File.read(file_name)
 				regex = Regexp.new "^@mixin #{mixin}\\(([^\{]+)\\)\\s\\{$", Regexp::MULTILINE
 				text.scan(regex) do |x|
-					x.to_s.split(',').each do |arg| 
+					x.to_s.split(',').each do |arg|
 						index += 1
 						args << "${#{index}:#{e_sn arg.squeeze.strip}}"
 					end
@@ -108,7 +105,7 @@ module Compass
 				text = File.read(file_name)
 				regex = Regexp.new "\\#{var}:(.*);"
 				text.scan(regex) do |x|
-					x.to_s.split(',').each do |arg| 
+					x.to_s.split(',').each do |arg|
 						index += 1
 						args << "${#{index}:#{e_sn arg.squeeze.strip}}"
 					end

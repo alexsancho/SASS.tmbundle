@@ -1,12 +1,9 @@
-#!/usr/bin/env ruby -wKU
-# encoding: utf-8
-
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require 'sass'
 require 'sass/css'
 require 'compass'
 
-# Used as a common require to set up the environment for commands. 
+# Used as a common require to set up the environment for commands.
 
 FILEPATH = "#{ENV['TM_FILEPATH']}"
 DIRECTORY = "#{ENV['TM_DIRECTORY']}"
@@ -26,7 +23,7 @@ SELECTED_TEXT = ENV['TM_SELECTED_TEXT'] || nil
 
 require SUPPORT + '/lib/escape'
 require SUPPORT + '/lib/exit_codes'
-require SUPPORT + '/lib/textmate' 
+require SUPPORT + '/lib/textmate'
 require SUPPORT + '/lib/ui'
 require SUPPORT + '/lib/web_preview'
 require SUPPORT + '/lib/tm/htmloutput'

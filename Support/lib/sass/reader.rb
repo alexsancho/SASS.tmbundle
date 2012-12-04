@@ -1,6 +1,3 @@
-#!/usr/bin/env ruby -wKU
-# encoding: utf-8
-
 class NoSassDirError < StandardError; end
 
 module SASS
@@ -26,7 +23,7 @@ module SASS
 				msg = ''
 				begin
 					i = 1
-					until Dir.getwd.match(/scss\/?$/) do
+					until Dir.getwd.match(/s[ac]ss\/?$/) do
 						raise NoSassDirError if (i > max_depth) or (Dir.getwd == project)
 						Dir.chdir('../')
 						i += 1
@@ -68,14 +65,14 @@ module SASS
 				return hash unless File.file?(filepath)
 				first_line = File.open(filepath) {|f| f.readline unless f.eof} || ''
 				return hash unless first_line.match(/\s*\/\/\s*(.+:.+)/)
-  
+
 				$1.split(',').inject({}) do |hash, pair|
 					k,v = pair.split(':')
 					hash[k.strip.to_sym] = v.strip.to_sym if k && v
 				end
 				hash
 			end
-  
+
 		private
 			def defaults(project)
 				if compass_root(project)
@@ -97,7 +94,7 @@ module SASS
 			def compass_bin
 				@compass_bin ||= ENV["TM_COMPASS"] || "compass"
 			end
-  
+
 			def output_filename(filepath, project)
 				file = (filepath[/(.*)\.#{type(filepath)}/,1] + ".css").gsub(/\/scss\//, '/css/')
 				@output_filename = options(filepath, project)[:output] || file

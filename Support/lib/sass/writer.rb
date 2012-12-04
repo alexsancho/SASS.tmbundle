@@ -1,6 +1,3 @@
-#!/usr/bin/env ruby -wKU
-# encoding: utf-8
-
 module SASS
 	module Writer
 		class << self

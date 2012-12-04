@@ -1,6 +1,3 @@
-#!/usr/bin/env ruby -wKU
-# encoding: utf-8
-
 module Compass
 	module Writer
 	  	class << self
@@ -28,7 +25,7 @@ module Compass
 			#
 			def tooltip(message)
 				return unless message
-    
+
 				if has_dialog2
 					`"$DIALOG" tooltip --text "#{message}"`
 				end
