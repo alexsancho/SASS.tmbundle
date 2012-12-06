@@ -8,7 +8,7 @@ module Compass
 						file.each_line do |line|
 							case line
 							when /^@mixin /i
-								match = line.scan(/^@mixin ([\w-]*)/).to_s
+								match = line.scan(/^@mixin ([\w-]*)/).to_s.gsub('[["', '').gsub('"]]', '')
 								mixins << {
 									'display' => match,
 									'match' => match,

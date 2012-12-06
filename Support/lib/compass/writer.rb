@@ -34,7 +34,7 @@ module Compass
 			def complete(choices, filter=nil)
 				TextMate.exit_show_tool_tip("Completions need DIALOG2 to function.") unless self.has_dialog2
 
-				if choices[0]['display'] == nil
+				if choices[0]['display'].nil?
 					puts "Error, was expecting Dialog2 compatable data."
 					exit
 				end
