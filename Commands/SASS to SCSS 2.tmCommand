@@ -21,14 +21,12 @@ echo "$TM_SELECTED_TEXT" | sass-convert --from sass --to scss</string>
 	<string>^@c</string>
 	<key>name</key>
 	<string>SASS to SCSS</string>
-	<key>output</key>
-	<string>replaceSelectedText</string>
 	<key>outputCaret</key>
-	<string>afterOutput</string>
+	<string>heuristic</string>
 	<key>outputFormat</key>
-	<string>html</string>
+	<string>text</string>
 	<key>outputLocation</key>
-	<string>discard</string>
+	<string>replaceSelection</string>
 	<key>scope</key>
 	<string>source.scss, source.sass</string>
 	<key>uuid</key>

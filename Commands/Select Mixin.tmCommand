@@ -10,8 +10,9 @@
 require ENV['TM_BUNDLE_SUPPORT'] + '/lib/env'
 
 TextMate::require_env_var 'TM_COMPASS_PATH'
+TextMate::exit_show_tool_tip "Require line with variable" if CURRENT_WORD.empty?
 
-Compass::Writer::complete(Compass::Reader::load_mixins, (CURRENT_WORD || '').strip.sub(/^\+/, ""))
+Compass::Writer::complete(Compass::Reader::load_mixins, CURRENT_WORD.strip.sub(/^\+/, ""))
 </string>
 	<key>fallbackInput</key>
 	<string>word</string>
