@@ -26,10 +26,10 @@ SASS::Writer::render("Creating Compass Project", SASS::Reader::compass_project(P
 	<key>outputLocation</key>
 	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>uuid</key>
 	<string>8C0AEB43-6095-424A-9750-9B8173BA9820</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

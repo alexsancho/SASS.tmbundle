@@ -30,10 +30,10 @@ SASS::Writer::convert('sass')
 	<key>outputLocation</key>
 	<string>replaceInput</string>
 	<key>scope</key>
-	<string>source.css, source.scss, source.sass</string>
+	<string>source.css, source.css.scss, source.sass</string>
 	<key>uuid</key>
 	<string>34F11652-B740-44FC-9D3C-9ABE74A5D1BB</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

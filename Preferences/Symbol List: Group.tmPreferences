@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>Symbol List: Group</string>
 	<key>scope</key>
-	<string>source.sass comment.block.sass -source.css.embedded, source.scss comment.block.scss -source.css.embedded</string>
+	<string>source.sass comment.block.sass -source.css.embedded, source.css.scss comment.block.scss -source.css.embedded</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>

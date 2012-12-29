@@ -26,10 +26,10 @@ SASS::Writer::render("Validating Project", SASS::Reader::compass_validate(PROJEC
 	<key>outputLocation</key>
 	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>uuid</key>
 	<string>B89FF647-3EA8-409D-AD27-5A3022C48822</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

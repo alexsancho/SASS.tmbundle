@@ -5,21 +5,21 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>if echo "$TM_SCOPE" | grep -q meta.property-list.css 
+	<string>if echo "$TM_SCOPE" | grep -q meta.property-list.css
    then
-	if echo "$TM_SCOPE" | grep -q meta.property-value.css 
+	if echo "$TM_SCOPE" | grep -q meta.property-value.css
        then
 		if echo "$TM_CURRENT_WORD" | grep -q url\(\)
 			then echo -n "'$TM_DROPPED_FILE'"
 		elif echo "$TM_SCOPE" | grep -q string.quoted.single.css
 			then echo -n "$TM_DROPPED_FILE"
-		else 
+		else
 			echo -n "url('$TM_DROPPED_FILE')"
 		fi
 	elif echo "$TM_SCOPE" | grep -q meta.at-rule.include.css
 		then echo -n "'$TM_DROPPED_FILE', "
 		sips -g pixelWidth -g pixelHeight "$TM_DROPPED_FILE"|awk '/pixelWidth/  { printf("%dpx, ",  $2) } /pixelHeight/ { printf("%dpx\$0", $2) }'
-	else 
+	else
 		echo -ne "background:\${1: #\${2:DDD}} url('$TM_DROPPED_FILE')\${3:};\n\$0"
 	fi
 else
@@ -40,7 +40,7 @@ fi</string>
 	<key>output</key>
 	<string>insertAsSnippet</string>
 	<key>scope</key>
-	<string>source.sass, source.scss</string>
+	<string>source.sass, source.css.scss</string>
 	<key>uuid</key>
 	<string>EA5829C3-8ADB-4FFB-879D-BAC7095B13DD</string>
 </dict>

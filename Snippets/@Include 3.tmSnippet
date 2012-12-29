@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>@Include</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>tabTrigger</key>
 	<string>include</string>
 	<key>uuid</key>

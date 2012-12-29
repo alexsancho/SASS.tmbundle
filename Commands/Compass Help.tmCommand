@@ -518,10 +518,10 @@ puts "&lt;meta http-equiv='Refresh' content='0;URL=#{url}'&gt;"
 	<key>outputLocation</key>
 	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>uuid</key>
 	<string>70D17404-57EB-4293-9DF3-F42903C0D300</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

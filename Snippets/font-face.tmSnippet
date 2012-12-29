@@ -6,8 +6,8 @@
 	<string>@mixin font-face( \$font-name, \$font-url ) {
 	@font-face {
 		font-family: '#{\$font-name}';
-		src: url('#{\$font-url}.eot?#iefix') format('embedded-opentype'), 
-			url('#{\$font-url}.woff') format('woff'), 
+		src: url('#{\$font-url}.eot?#iefix') format('embedded-opentype'),
+			url('#{\$font-url}.woff') format('woff'),
 			url('#{\$font-url}.ttf')  format('truetype'),
 			url('#{\$font-url}.svg#svg#{\$font-name}') format('svg');
 	}
@@ -15,7 +15,7 @@
 	<key>name</key>
 	<string>font-face</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>tabTrigger</key>
 	<string>mixin</string>
 	<key>uuid</key>

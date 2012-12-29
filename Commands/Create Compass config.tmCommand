@@ -26,10 +26,10 @@ SASS::Writer::render("Creating Compass Config", SASS::Reader::compass_config)
 	<key>outputLocation</key>
 	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>uuid</key>
 	<string>D0B84931-AF7B-42B1-B420-FC04D9310B1E</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

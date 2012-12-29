@@ -35,10 +35,10 @@ TextMate::go_to result
 	<key>outputLocation</key>
 	<string>discard</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>uuid</key>
 	<string>B5A48AE5-B2D1-4985-B4E0-D697589E9B5E</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

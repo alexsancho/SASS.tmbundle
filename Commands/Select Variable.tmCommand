@@ -30,10 +30,10 @@ Compass::Writer::complete(Compass::Reader::load_variables, (CURRENT_WORD || '').
 	<key>outputLocation</key>
 	<string>discard</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>uuid</key>
 	<string>364B7447-34FE-4372-95A6-4799E7156EE6</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

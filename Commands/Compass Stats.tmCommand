@@ -26,10 +26,10 @@ SASS::Writer::render("Project Stats", SASS::Reader::compass_stats(PROJECT))
 	<key>outputLocation</key>
 	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>uuid</key>
 	<string>697FF453-D82A-4D9F-A59C-12708E91C670</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Property: Name</string>
 	<key>scope</key>
-	<string>source.sass meta.property-list, source.scss meta.property-list</string>
+	<string>source.sass meta.property-list, source.css.scss meta.property-list</string>
 	<key>settings</key>
 	<dict>
 		<key>completions</key>

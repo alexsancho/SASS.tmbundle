@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Symbol List: Mixin</string>
 	<key>scope</key>
-	<string>source.sass meta.variable-declaration.sass.mixin variable.other.sass, source.scss meta.variable-declaration.scss.mixin variable.other.scss</string>
+	<string>source.sass meta.variable-declaration.sass.mixin variable.other.sass, source.css.scss meta.variable-declaration.scss.mixin variable.other.scss</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>

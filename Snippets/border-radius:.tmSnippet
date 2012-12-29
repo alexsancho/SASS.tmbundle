@@ -8,7 +8,7 @@ border-radius:${TM_CSS_SPACE}${1:1}px${2:;}$0</string>
 	<key>name</key>
 	<string>border-radius:</string>
 	<key>scope</key>
-	<string>source.sass, source.scss</string>
+	<string>source.sass, source.css.scss</string>
 	<key>tabTrigger</key>
 	<string>border</string>
 	<key>uuid</key>

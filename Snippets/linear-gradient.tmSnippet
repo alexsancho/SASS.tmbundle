@@ -17,7 +17,7 @@
 	<key>name</key>
 	<string>linear-gradient</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>tabTrigger</key>
 	<string>mixin</string>
 	<key>uuid</key>

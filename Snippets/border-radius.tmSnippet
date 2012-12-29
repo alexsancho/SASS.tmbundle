@@ -10,12 +10,12 @@
 
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding-box;
-	background-clip: padding-box; 
+	background-clip: padding-box;
 }</string>
 	<key>name</key>
 	<string>border-radius</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>tabTrigger</key>
 	<string>mixin</string>
 	<key>uuid</key>

@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Symbol List: Variable declaration</string>
 	<key>scope</key>
-	<string>source.sass meta.set.variable variable, source.scss meta.set.variable variable</string>
+	<string>source.sass meta.set.variable variable, source.css.scss meta.set.variable variable</string>
 	<key>settings</key>
 	<dict>
 		<key>showInSymbolList</key>

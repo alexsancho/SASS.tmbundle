@@ -26,10 +26,10 @@ SASS::Writer::render("Compile file", SASS::Reader::compile_project(File.join(PRO
 	<key>outputLocation</key>
 	<string>newWindow</string>
 	<key>scope</key>
-	<string>source.scss, source.sass</string>
+	<string>source.css.scss, source.sass</string>
 	<key>uuid</key>
 	<string>4410C027-6C84-44E7-9A36-505C90105991</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>

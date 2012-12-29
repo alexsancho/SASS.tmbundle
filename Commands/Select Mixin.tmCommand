@@ -31,10 +31,10 @@ Compass::Writer::complete(Compass::Reader::load_mixins, CURRENT_WORD.strip.sub(/
 	<key>outputLocation</key>
 	<string>discard</string>
 	<key>scope</key>
-	<string>source.scss</string>
+	<string>source.css.scss</string>
 	<key>uuid</key>
 	<string>D78DFD72-7CC9-4DFE-A225-ABEE4AC9CFDB</string>
 	<key>version</key>
-	<integer>2</integer>
+	<string>2</string>
 </dict>
 </plist>
