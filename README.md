@@ -66,3 +66,6 @@ THANKS
 [2]: http://compass-style.org/
 [3]: http://thesassway.com/
 [4]: http://thesassway.com/beginner/getting-started-with-sass-and-compass
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/alexsancho/sass.tmbundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
